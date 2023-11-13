@@ -1,6 +1,6 @@
 var finances = [
-  ['Jan-2010', 867884],
-  ['Feb-2010', 984655],
+  ['Jan-2010', 867884],  // Feb - jan 
+  ['Feb-2010', 984655], // Mar - Feb  
   ['Mar-2010', 322013],
   ['Apr-2010', -69417],
   ['May-2010', 310503],
@@ -88,8 +88,78 @@ var finances = [
 ];
 
 
-totalOfMonths = finances.length
-console.log(totalOfMonths)
+console.log("financial Analysis");
+console.log("---------------------------");
+
+//Total number of months included in the dataset
+
+console.log("totalMonths:" + finances.length);
+
+//figured out the numbers of rows in the finance variable.
+//The next total amount of profit/losses over the entire period.
+//sum everything together
+//For loop
+
+var netTotalAmount = 0;
+var totalChangeAmount = 0;
+var changes = [];
+
+for (i = 0; i < finances.length; + i++)
+{netTotalAmount += finances[i][1]
+
+if (i !=0 ){
+  //Change working shown here
+  var currentChange = finances[i][1] - finances[i-1][1];
+  changes.push(currentChange);
+  totalChangeAmount += currentChange
+}
+
+}
+
+console.log("total:$" + netTotalAmount)
+
+//The average of the changes profit/losses over the entire period.
+//calculate each average change by substracting previous month from current month
+
+console.log("Average change:$" + totalChangeAmount/(finances.length - 1))
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+/* totalMonths = finances.length
+console.log(totalMonths)
+
+
+var totalMonthlyChange = 0
+
+for (i = 0; i < finances.length; i++) {
+
+ var currentMonth = finances[i][1]
+ var nextMonth = finances[i+1]
+
+ if (nextMonth){
+  totalMonthlyChange += finances[i+1][1] - currentMonth
+ }
+
+}
+console.log(totalMonthlyChange / (totalMonths - 1))
+*/
+
+
+// The net total amount of Profit/Losses over the entire period to be determined
+
+
+
 
 /* 
 Create variable for each requirements ,
