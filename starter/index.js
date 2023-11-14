@@ -123,3 +123,21 @@ console.log("total: $" + netTotalAmount)
 //calculate each average change by subtracting previous month from current month
 
 console.log("Average change: $" + (totalChangeAmount/(finances.length-1)).toFixed(2));
+
+//calculating the greatest increase & decrease in Profit/Losses (date and amount) over the entire period.
+
+var greatestIncrease = Math.max(...changes)
+var greatestDecrease = Math.min(...changes)
+
+var indexMax = changes.indexOf(greatestIncrease) + 1
+var indexMin = changes.indexOf(greatestDecrease) + 1
+
+var maxMonth = finances[indexMax][0]
+var minMonth = finances[indexMin][0]
+
+console.log(changes)
+
+
+console.log("Greatest Increase in Profits/Losses:" + maxMonth + " ($" + greatestIncrease + ")");
+
+console.log("Greatest Decrease in Profits/Losses:" + minMonth + " ($" + greatestDecrease + ")");
