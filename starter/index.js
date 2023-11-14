@@ -94,3 +94,27 @@ console.log("----------------------------");
 //Total number of months included in the dataset
 
 console.log("totalMonths: " + finances.length);
+
+
+//figured out the numbers of rows in the finance variable.
+//The next total amount of profit/losses over the entire period.
+//sum everything together
+//For loop
+
+var netTotalAmount = 0;
+var totalChangeAmount = 0;
+var changes = [];
+
+for (i = 0; i < finances.length; + i++)
+{netTotalAmount += finances[i][1]
+
+if (i !=0 ){
+  //Change working shown here
+  var currentChange = finances[i][1] - finances[i-1][1];
+  changes.push(currentChange);
+  totalChangeAmount += currentChange
+}
+
+}
+
+console.log("total: $" + netTotalAmount)
