@@ -118,3 +118,8 @@ if (i !=0 ){
 }
 
 console.log("total: $" + netTotalAmount)
+
+//The average of the changes profit/losses over the entire period.
+//calculate each average change by subtracting previous month from current month
+
+console.log("Average change: $" + (totalChangeAmount/(finances.length-1)).toFixed(2));
